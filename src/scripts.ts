@@ -10,19 +10,16 @@ const showMessage = (message: string, type: string) => {
     Toastify({
       text: message,
       duration: 3000,
-      gravity: "top", // `top` or `bottom`
-      position: "left",
       stopOnFocus: true, // Prevents dismissing of toast on hover
       style: {
         background: "linear-gradient(to right, #00b09b, #96c93d)",
       },
+      className: "custom-toast",
     }).showToast();
   } else {
     Toastify({
       text: message,
       duration: 3000,
-      gravity: "top", // `top` or `bottom`
-      position: "left",
       stopOnFocus: true, // Prevents dismissing of toast on hover
       style: {
         background: "linear-gradient(to right, #e74c3c,#96c93d)",
@@ -35,13 +32,19 @@ const showMessage = (message: string, type: string) => {
 
 $(".js-wrapper").html(
   `<form class="js-form inputForm">
-    <label for="name">Name</label>
-    <input type="text" class="js-nameField" id="name" placeholder="Full name">
-    <label for="email">E-mail</label>
-    <input type="text" class="js-emailField" id="email" placeholder="E-mail address">
-    <label for="password">Password</label>
-    <input type="text" class="js-passwordField" id="password" placeholder="Password">
-    <button class="favorite styled" type="submit">Submit</button>
+    <div class="input-wrapper">
+      <label for="name">Name</label>
+      <input type="text" class="js-nameField inputField" id="name" placeholder="Full name">
+    </div>
+    <div class="input-wrapper">
+      <label for="email">E-mail</label>
+      <input type="text" class="js-emailField inputField" id="email" placeholder="E-mail address">
+    </div>
+    <div class="input-wrapper">
+      <label for="password">Password</label>
+      <input type="text" class="js-passwordField inputField" id="password" placeholder="Password">
+    </div>
+    <button class="submitBtn" type="submit">Submit</button>
   </form>`
 );
 
