@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.formWrapper{
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.inputForm{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid black;
+    padding: 50px 25px;
+}
+
+.custom-toast {
+    max-width: 300px;
+}
